@@ -40,6 +40,7 @@ CREATE TABLE genre (
     PRIMARY KEY(genre_id)
 ); 
 -- create the film table and set the foreign key
+
 CREATE TABLE film (
     film_id   INT             NOT NULL        AUTO_INCREMENT,
     film_name  VARCHAR(75)     NOT NULL,
