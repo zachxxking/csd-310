@@ -16,16 +16,18 @@ CREATE USER 'wineboss'@'localhost' IDENTIFIED WITH mysql_native_password BY 'win
 GRANT ALL PRIVILEGES ON bacchus.* TO 'wineboss'@'localhost';
 
 -- remove old tables if they exist
-DROP TABLE IF EXISTS Employee;
-DROP TABLE IF EXISTS Time_Card;
-DROP TABLE IF EXISTS Orders;
-DROP TABLE IF EXISTS Wine_Sales;
-DROP TABLE IF EXISTS Supplier;
-DROP TABLE IF EXISTS Supply_Delivery;
-DROP TABLE IF EXISTS Distributor;
-DROP TABLE IF EXISTS Wine;
-DROP TABLE IF EXISTS Supply_Inventory;
+
+
 DROP TABLE IF EXISTS Supply_Items;
+DROP TABLE IF EXISTS Supply_Inventory;
+DROP TABLE IF EXISTS Supply_Delivery;
+DROP TABLE IF EXISTS Supplier;
+DROP TABLE IF EXISTS Wine_Sales;
+DROP TABLE IF EXISTS Orders;
+DROP TABLE IF EXISTS Wine;
+DROP TABLE IF EXISTS Distributor;
+DROP TABLE IF EXISTS Time_Card;
+DROP TABLE IF EXISTS Employee;
 
 -- create our 10 tables as they're laid out in our ERD
 CREATE TABLE Employee (
@@ -291,33 +293,33 @@ VALUES
 (1, 1, 200, '2024-01-05'),
 (2, 2, 150, '2024-01-15'),
 (3, 3, 100, '2024-01-20'),
-(4, 4, 180, '2024-02-02'),   -- Chardonnay to Distributor 1
+(4, 4, 180, '2024-02-02'), 
 (1, 5, 220, '2024-02-07'),
-(4, 6, 160, '2024-02-18'),   -- Chardonnay to Distributor 3
+(4, 6, 160, '2024-02-18'),
 (2, 7, 180, '2024-03-01'),
 (3, 8, 210, '2024-03-12'),
-(4, 9, 230, '2024-03-20'),   -- Chardonnay to Distributor 2
+(4, 9, 230, '2024-03-20'),
 (1, 10, 250, '2024-04-05'),
-(4, 11, 200, '2024-04-10'),   -- Chardonnay to Distributor 2
+(4, 11, 200, '2024-04-10'),
 (2, 12, 270, '2024-04-18'),
 (3, 13, 150, '2024-05-02'),
 (1, 14, 180, '2024-05-12'),
-(4, 15, 200, '2024-05-15'),   -- Chardonnay to Distributor 3
+(4, 15, 200, '2024-05-15'),
 (2, 16, 250, '2024-06-05'),
 (3, 17, 190, '2024-06-10'),
-(4, 18, 210, '2024-06-18'),   -- Chardonnay to Distributor 1
+(4, 18, 210, '2024-06-18'),
 (1, 19, 220, '2024-07-01'),
 (2, 20, 200, '2024-07-07'),
-(4, 21, 240, '2024-07-14'),   -- Chardonnay to Distributor 3
+(4, 21, 240, '2024-07-14'),
 (3, 22, 250, '2024-08-02'),
 (1, 23, 230, '2024-08-10'),
-(4, 24, 190, '2024-08-15'),   -- Chardonnay to Distributor 2
+(4, 24, 190, '2024-08-15'),
 (2, 25, 220, '2024-09-05'),
-(4, 26, 170, '2024-09-12'),   -- Chardonnay to Distributor 1
+(4, 26, 170, '2024-09-12'),
 (3, 27, 250, '2024-09-18'),
 (1, 28, 260, '2024-10-01'),
 (2, 29, 210, '2024-10-12'),
-(4, 30, 180, '2024-10-20');   -- Chardonnay to Distributor 3
+(4, 30, 180, '2024-10-20');
 
 INSERT INTO Supplier (Supplier_Name, Supplier_Contact)
 VALUES
@@ -355,7 +357,14 @@ VALUES
 (2, '2024-09-05', '2024-09-06'),
 (3, '2024-09-10', '2024-09-11'),
 (1, '2024-10-01', '2024-09-30'),
-(2, '2024-10-05', '2024-10-05');
+(2, '2024-10-05', '2024-10-05'),
+(1, '2024-10-15', '2024-10-17'),
+(1, '2024-11-07', '2024-11-08'),
+(2, '2024-11-12', '2024-11-13'),
+(3, '2024-11-18', '2024-11-19'),
+(1, '2024-12-15', '2024-12-16'),
+(2, '2024-12-20', '2024-12-21'),
+(3, '2024-12-25', '2024-12-26');
 
 INSERT INTO Supply_Inventory (Supply_Name, Supply_Stock, Supplier_ID, Cost_Per_Unit)
 VALUES

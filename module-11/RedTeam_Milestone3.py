@@ -1,3 +1,10 @@
+# Program: Reports for Bacchus Winery
+# Authors: Red Team - Ryan Monnier, Zachariah King, Jacob Achenbach
+# Date: 3/2/25
+# Description: This program uses a variety of modules and sql connections
+#              to create reports needed for Bacchus Winery that deal with
+#              supplier deliveries, wine sales, and employee hours.
+
 import mysql.connector
 import os
 import matplotlib.pyplot as plt
